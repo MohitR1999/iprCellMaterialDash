@@ -50,13 +50,13 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   
-  {
-    path: "/table",
-    name: "Table List",
-    icon: "content_paste",
-    component: TableList,
-    layout: "/admin"
-  },
+  // {
+  //   path: "/table",
+  //   name: "Table List",
+  //   icon: "content_paste",
+  //   component: TableList,
+  //   layout: "/admin"
+  // },
 
   
   {

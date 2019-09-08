@@ -118,7 +118,7 @@ export default function Admin({ ...rest }) {
         ) : (
           <div className={classes.map}>{switchRoutes}</div>
         )}
-        {getRoute() ? <Footer /> : null}
+        {getRoute() ? null : null}
       </div>
     </div>
   );

@@ -194,6 +194,32 @@ export default function Dashboard() {
             </CardFooter>
           </Card>
         </GridItem>
+
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="danger">
+              <ChartistGraph
+                className="ct-chart"
+                data={completedTasksChart.data}
+                type="Line"
+                options={completedTasksChart.options}
+                listener={completedTasksChart.animation}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Completed Tasks</h4>
+              <p className={classes.cardCategory}>Last Campaign Performance</p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
+
+
       </GridContainer>
       <GridContainer>
         {/* <GridItem xs={12} sm={12} md={6}>
