@@ -18,7 +18,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Router, Route, Switch, Redirect, Link } from "react-router-dom";
 import SignInSide from "components/SideSignIn/Sidesignin";
 // core components
 import Admin from "layouts/Admin.js";
@@ -27,16 +27,16 @@ import Admin from "layouts/Admin.js";
 import "assets/css/material-dashboard-react.css?v=1.8.0";
 
 const hist = createBrowserHistory();
-console.log(hist);
+//console.log(hist);
 
-ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
-      <Route path="/signin" component={SignInSide} />
+ ReactDOM.render(
+   <Router history={hist}>
+     <Switch>
+       <Route path="/signin" component={SignInSide} />
+       <Redirect from="/" to="/signin" />
+       {/* <Redirect from="/" to="/admin/dashboard" /> */}
+     </Switch>
+   </Router>,
+   document.getElementById("root")
+ );
 
-      <Redirect from="/" to="/signin" />
-      {/* <Redirect from="/" to="/admin/dashboard" /> */}
-    </Switch>
-  </Router>,
-  document.getElementById("root")
-);

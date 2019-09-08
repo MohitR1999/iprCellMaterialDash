@@ -58,8 +58,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const routeChange = (props) => {
-  let path = `/admin/dashboard`;
-  props.history.push(path);
+  console.log(props);
+  // let path = `/admin/dashboard`;
+  props.history.push({pathname: '/admin/dashboard'});
+  console.log(props);
 }
 
 function SignInSide(props) {

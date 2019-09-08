@@ -40,7 +40,6 @@ const dashboardRoutes = [
     name: "Sign In",
     icon: Dashboard,
     component: SignInSide,
-    layout: "/admin"
   },
   
   {
