@@ -12,6 +12,8 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { withRouter } from 'react-router-dom';
+
 
 function Copyright() {
   return (
@@ -55,7 +57,12 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function SignInSide() {
+const routeChange = (props) => {
+  let path = `/admin/dashboard`;
+  props.history.push(path);
+}
+
+function SignInSide(props) {
   const classes = useStyles();
 
   return (
@@ -103,6 +110,7 @@ export default function SignInSide() {
               variant="contained"
               color="primary"
               className={classes.submit}
+              onClick={routeChange.bind(this, props)}
             >
               Sign In
             </Button>
@@ -127,3 +135,6 @@ export default function SignInSide() {
     </Grid>
   );
 }
+
+
+export default withRouter(SignInSide);
