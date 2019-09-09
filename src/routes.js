@@ -35,12 +35,12 @@ import Maps from "views/Maps/Maps.js";
 import NotificationsPage from "views/Notifications/Notifications.js";
 import SignInSide from "components/SideSignIn/Sidesignin.js";
 const dashboardRoutes = [
-  {
-    path: "/signin",
-    name: "Sign In",
-    icon: Dashboard,
-    component: SignInSide,
-  },
+  // {
+  //   path: "/signin",
+  //   name: "Sign In",
+  //   icon: Dashboard,
+  //   component: SignInSide,
+  // },
   
   {
     path: "/dashboard",
